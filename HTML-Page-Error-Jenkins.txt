@@ -1,0 +1,9 @@
+This is for html page not working on jenkins server
+
+You need to run this script on jenkins.
+ > Open the Jenkin home page.
+ > Go to Manage Jenkins.
+ > Now go to Script Console.
+ > In that console paste below line and click on Run. 
+    "System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")"
+ > open html-report it will show as expected.
