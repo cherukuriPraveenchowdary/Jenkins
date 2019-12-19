@@ -1,0 +1,23 @@
+Jenkins File Transfer.
+> Windows to Linux
+> Pre Req:
+  > Jenkins Windows Machine
+  > Linux Remote Machine
+  > Publish Over SSH Plugin Installed in jebkins Server.
+Step 1: First configure ssh 
+        > Copy public key into remote machane.
+        > before create jenkins user on remote machine with sudo permissions. 
+        > Paths (Jenkins Server > .ssh/id_rsa.pub)(Remote Machine > /home/jenkins/.ssh/authorized_keys).
+Step 2: In Jenkins Server 
+        > Go to the Manage Jenkins > Configure System.
+        > In the Publish over SSH section.
+           > add remote servers details.
+             * Name
+	     * Hostname
+	     * Username	
+	     * Remote Directory	
+              > Advanced section.
+                * add private key path (like > C:\.ssh\id_rsa)
+Step 3: Permissions 
+        > For copying the files to remote machine that remote machane dirctory change permissions.
+        > "sudo chown -R jenkins:jenkins 'directory' 
